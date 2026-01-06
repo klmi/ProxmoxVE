@@ -14,6 +14,8 @@ setting_up_container
 network_check
 update_os
 
+msg_info "blub"
+
 fetch_and_deploy_gh_release "scanopy" "scanopy/scanopy" "tarball" "latest" "/opt/scanopy"
 
 service_name="scanopy-daemon"
