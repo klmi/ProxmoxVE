@@ -41,5 +41,5 @@ description
 
 msg_ok "Completed Successfully!\n"
 echo -e "${CREATING}${GN}${APP} setup has been successfully initialized!${CL}"
-echo -e "${INFO}${YW} Access it using the following URL:${CL}"
+echo -e "${INFO}${YW} Please log in into the container and configure the daemon if first installation.${CL}"
 echo -e ""

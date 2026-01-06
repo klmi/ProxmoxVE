@@ -14,6 +14,8 @@ setting_up_container
 network_check
 update_os
 
+fetch_and_deploy_gh_release "scanopy" "scanopy/scanopy" "tarball" "latest" "/opt/scanopy"
+
 service_name="scanopy-daemon"
 service="/etc/systemd/system/$service_name.service"
 install_script="/opt/scanopy/install.sh"
