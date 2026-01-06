@@ -16,7 +16,10 @@ update_os
 
 msg_info "blub"
 
-fetch_and_deploy_gh_release "scanopy" "scanopy/scanopy" "tarball" "latest" "/opt/scanopy"
+#fetch_and_deploy_gh_release "scanopy" "scanopy/scanopy" "tarball" "latest" "/opt/scanopy"
+
+mkdir -p /opt/scanopy
+wget https://raw.githubusercontent.com/scanopy/scanopy/refs/heads/main/install.sh -o /opt/scanopy/install.sh
 
 service_name="scanopy-daemon"
 service="/etc/systemd/system/$service_name.service"

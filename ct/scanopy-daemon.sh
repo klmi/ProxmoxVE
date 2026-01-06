@@ -28,10 +28,10 @@ function update_script() {
      exit
    fi
 
-   if check_for_gh_release "scanopy" "scanopy/scanopy"; then
-     CLEAN_INSTALL=1 fetch_and_deploy_gh_release "scanopy" "scanopy/scanopy" "tarball" "latest" "/opt/scanopy"
-     exit
-   fi
+#   if check_for_gh_release "scanopy" "scanopy/scanopy"; then
+#     CLEAN_INSTALL=1 fetch_and_deploy_gh_release "scanopy" "scanopy/scanopy" "tarball" "latest" "/opt/scanopy"
+#     exit
+#   fi
    exit
  }
 
