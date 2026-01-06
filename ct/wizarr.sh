@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
-# Copyright (c) 2021-2025 community-scripts ORG
+# Copyright (c) 2021-2026 community-scripts ORG
 # Author: vhsdream
 # License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Source: https://github.com/wizarrrr/wizarr
@@ -45,7 +45,7 @@ function update_script() {
     fetch_and_deploy_gh_release "wizarr" "wizarrrr/wizarr"
 
     msg_info "Updating Wizarr"
-    cd /opt/wizarr || exit
+    cd /opt/wizarr
     $STD /usr/local/bin/uv sync --frozen
     $STD /usr/local/bin/uv run --frozen pybabel compile -d app/translations
     $STD npm --prefix app/static install

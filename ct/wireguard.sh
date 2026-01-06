@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
-# Copyright (c) 2021-2025 tteck
+# Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
 # License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Source: https://www.wireguard.com/
@@ -38,7 +38,7 @@ function update_script() {
   apt -y upgrade
   if [[ -d /etc/wgdashboard ]]; then
     sleep 2
-    cd /etc/wgdashboard/src || exit
+    cd /etc/wgdashboard/src
     ./wgd.sh update
     ./wgd.sh start
   fi

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
-# Copyright (c) 2021-2025 community-scripts ORG
+# Copyright (c) 2021-2026 community-scripts ORG
 # Author: kristocopani
 # License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Source: https://www.inspircd.org/
@@ -32,7 +32,7 @@ function update_script() {
     systemctl stop inspircd
     msg_ok "Stopped Service"
 
-    fetch_and_deploy_gh_release "inspircd" "inspircd/inspircd" "binary"
+    fetch_and_deploy_gh_release "inspircd" "inspircd/inspircd" "binary" "latest" "/opt/inspircd" "inspircd_*.deb13u1_amd64.deb"
 
     msg_info "Starting Service"
     systemctl start inspircd

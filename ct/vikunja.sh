@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
-# Copyright (c) 2021-2025 community-scripts ORG
+# Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (Canbiz)
 # License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Source: https://vikunja.io/
@@ -34,7 +34,7 @@ function update_script() {
     msg_ok "Stopped Service"
 
     msg_info "Updating ${APP} to ${RELEASE}"
-    cd /opt || exit
+    cd /opt
     rm -rf /opt/vikunja/vikunja
     curl -fsSL "https://dl.vikunja.io/vikunja/$RELEASE/vikunja-$RELEASE-amd64.deb" -o $(basename "https://dl.vikunja.io/vikunja/$RELEASE/vikunja-$RELEASE-amd64.deb")
     export DEBIAN_FRONTEND=noninteractive
